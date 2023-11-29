@@ -133,27 +133,27 @@ $(function() {
      <div class="box" style="border: 1px solid black;">
       <div class="col-md-10">
                 <label for="">NO. MR</label>
-                : <input type="text" id="v_01" name="v_01">
+                : <input type="text" id="no_Registration" name="no_Registration" autofocus readonly>
       </div>
       <div class="col-md-10">
                 <label for="">Nama</label>
-                : <input type="text" id="v_01" name="v_01">
+                : <input type="text" id="thename" name="thename" readonly>
              </div>
            </td>
 
       <div class="col-md-10">
                 <label for="">Tanggal Lahir</label>
-                : <input type="date" id="v_01" name="v_01">
+                : <input type="date" id="date_of_birth" name="date_of_birth" readonly>
              </div>
       <div>
                                    <label for="">Jenis Kelamin</label>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="t_01" value="option1">
-                                        <label class="form-check-label" for="t_01">Laki-laki</label>
+                                        <input class="form-check-input" type="radio" name="gender" value="gender" readonly>
+                                        <label class="form-check-label" for="gender">Laki-laki</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="t_02" value="option2">
-                                        <label class="form-check-label" for="t_02">Perempuan</label>
+                                        <input class="form-check-input" type="radio" name="gender" value="gender" readonly>
+                                        <label class="form-check-label" for="gender">Perempuan</label>
                                     </div>
                                 </div>
            
@@ -168,22 +168,22 @@ $(function() {
           <td colspan="6">
             <div class="row">
               <div class="col-2">
-               <label for="">Tanggal Operasi     </label>
+               <label for="">Tanggal Operasi</label>
                </div>
                <div class="col-4">
-               : <input type="date" id="v_01" name="v_01" style="width: 100px;" required autofocus>
+               : <input type="date" id="v_01" name="v_01" style="width: 100px;" >
              </div>
              <div class="col-1">
                   <label for="">Sifat</label>
               </div>
               <div class="col-2">
                 <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="t_01" value="option1">
-                <label class="form-check-label" for="t_01">Elektif</label>
+                <input class="form-check-input" type="radio" name="t_01" id="t_01_elektif">
+                <label class="form-check-label" for="t_01_elektif">Elektif</label>
                 </div>
                 <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="t_02" value="option2">
-                <label class="form-check-label" for="t_02">Cito</label>
+                <input class="form-check-input" type="radio" name="t_01" id="t_01_cito">
+                <label class="form-check-label" for="t_01_cito">Cito</label>
                 </div>                 
                 </div>
               </div>
@@ -199,7 +199,7 @@ $(function() {
                  <label for="">Operator</label>
                 </div>
                 <div class="col-md-6">
-                : dr.<input type="text" id="v_01" name="v_01" style="width: 150px;" required autofocus>
+                : dr.<input type="text" id="v_02" name="v_02" style="width: 150px;" >
                 </div>
               </div>
             </div>
@@ -209,7 +209,7 @@ $(function() {
                  <label for="">Anastesiolog</label>
                 </div>
                 <div class="col-md-6">
-                : dr.<input type="text" id="v_01" name="v_01" style="width: 150px;" required autofocus>
+                : dr.<input type="text" id="v_03" name="v_03" style="width: 150px;" >
                 </div>
               </div>
             </div>
@@ -224,7 +224,7 @@ $(function() {
                                     <label for="">Diagnosa Op. /Lokasi </label>
                                 </div>
                                 <div class="col-md-6">
-                                   : <input type="text" id="v_01" name="v_01" style="width: 300px;" required autofocus>
+                                   : <input type="text" id="v_04" name="v_04" style="width: 300px;">
                                 </div>
                             </div>
           </td>
@@ -247,15 +247,17 @@ $(function() {
           <td style="text-align: center;">1</td>
           <td>Bon Permintaan</td>
          <td>
-            <div class="mb-1 form-check">
-                              <input for="ya" type="checkbox" class="form-check-input" id="t_04">
-                              <label class="form-check-label" name="t_04"></label>
+            <div class="mb-1">
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="t_02" id="t_02">
+                              </div>
                             </div>
            </td>
            <td>
-           <div class="mb-1 form-check">
-                              <input for="tidak" type="checkbox" class="form-check-input" id="t_04">
-                              <label class="form-check-label" name="t_04"></label>
+           <div class="mb-1">
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="t_02" id="t_02">
+                              </div>
                             </div>
           </td>
           <td style="text-align: center;">1</td>
@@ -266,11 +268,11 @@ $(function() {
               </div>
               <div class="col-md-4">
                 <div class="form-check-inline">
-                  <input type="radio" class="form-check-input" name="t_01" >
+                  <input type="radio" class="form-check-input" name="t_05" value="t_05">
                   <label>Ada</label>
                 </div>
                 <div class="form-check-inline">
-                  <input type="radio" class="form-check-input" name="t_01">
+                  <input type="radio" class="form-check-input" name="t_05" value="t_05">
                   <label>Tidak</label>
                 </div>
               </div>
@@ -284,14 +286,14 @@ $(function() {
            <td>Gelang Identitas Pasien</td>
            <td>
             <div class="mb-1 form-check">
-                              <input for="ya" type="checkbox" class="form-check-input" id="t_04">
-                              <label class="form-check-label" name="t_04"></label>
+                              <input for="ya" type="checkbox" class="form-check-input" id="t_06">
+                              <label class="form-check-label" name="t_06"></label>
                             </div>
            </td>
            <td>
            <div class="mb-1 form-check">
-                              <input for="tidak" type="checkbox" class="form-check-input" id="t_04">
-                              <label class="form-check-label" name="t_04"></label>
+                              <input for="tidak" type="checkbox" class="form-check-input" id="t_07">
+                              <label class="form-check-label" name="t_07"></label>
                             </div>
           </td>
            <td rowspan="3" style="text-align: center;">2</td>
@@ -303,21 +305,21 @@ $(function() {
               <div class="col-6">
              <div class="col-md-5">
                 <label for="">TD</label>
-                : <input type="text" id="v_01" name="v_01" style="width: 50%">mmHg
+                : <input type="text" id="v_07" name="v_07" style="width: 50%">mmHg
              </div>
             <div class="col-md-5">
                 <label for="">RR</label>
-                : <input type="text" id="v_01" name="v_01" style="width: 50%">x/mnt
+                : <input type="text" id="v_08" name="v_08" style="width: 50%">x/mnt
              </div>
           </div>
           <div class="col-6">
             <div class="col-md-5">
                 <label for="">N</label>
-                : <input type="text" id="v_01" name="v_01" style="width: 50%">x/mnt
+                : <input type="text" id="v_09" name="v_09" style="width: 50%">x/mnt
              </div>
             <div class="col-md-5">
                 <label for="">S</label>
-                : <input type="text" id="v_01" name="v_01" style="width: 50%">°C
+                : <input type="text" id="v_10" name="v_10" style="width: 50%">°C
              </div>
           </div>
           </div>
@@ -330,14 +332,14 @@ $(function() {
            <td>Informed Concent Bedah</td>
           <td>
             <div class="mb-1 form-check">
-                              <input for="ya" type="checkbox" class="form-check-input" id="t_04">
-                              <label class="form-check-label" name="t_04"></label>
+                              <input for="ya" type="checkbox" class="form-check-input" id="t_08">
+                              <label class="form-check-label" name="t_08"></label>
                             </div>
            </td>
            <td>
            <div class="mb-1 form-check">
-                              <input for="tidak" type="checkbox" class="form-check-input" id="t_04">
-                              <label class="form-check-label" name="t_04"></label>
+                              <input for="tidak" type="checkbox" class="form-check-input" id="t_09">
+                              <label class="form-check-label" name="t_09"></label>
                             </div>
           </td>
          </tr>
@@ -347,14 +349,14 @@ $(function() {
            <td>Informed Concent Anestesi</td>
            <td>
             <div class="mb-1 form-check">
-                              <input for="perempuan" type="checkbox" class="form-check-input" id="t_04">
-                              <label class="form-check-label" name="t_04"></label>
+                              <input for="perempuan" type="checkbox" class="form-check-input" id="t_010">
+                              <label class="form-check-label" name="t_010"></label>
                             </div>
            </td>
            <td>
            <div class="mb-1 form-check">
-                              <input for="perempuan" type="checkbox" class="form-check-input" id="t_04">
-                              <label class="form-check-label" name="t_04"></label>
+                              <input for="perempuan" type="checkbox" class="form-check-input" id="t_011">
+                              <label class="form-check-label" name="t_011"></label>
                             </div>
           </td>
          </tr>
@@ -364,14 +366,14 @@ $(function() {
            <td>Asesmen Pra Anestesi</td>
           <td>
             <div class="mb-1 form-check">
-                              <input for="ya" type="checkbox" class="form-check-input" id="t_04">
-                              <label class="form-check-label" name="t_04"></label>
+                              <input for="ya" type="checkbox" class="form-check-input" id="t_012">
+                              <label class="form-check-label" name="t_012"></label>
                             </div>
            </td>
            <td>
            <div class="mb-1 form-check">
-                              <input for="tidak" type="checkbox" class="form-check-input" id="t_04">
-                              <label class="form-check-label" name="t_04"></label>
+                              <input for="tidak" type="checkbox" class="form-check-input" id="t_013">
+                              <label class="form-check-label" name="t_013"></label>
                             </div>
           </td>
            <td rowspan="2" style="text-align: center;">3</td>
